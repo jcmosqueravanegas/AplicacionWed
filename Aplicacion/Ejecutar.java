@@ -25,20 +25,17 @@ public class Ejecutar {
         nota.agregarEtiqueta(tag1);
         nota.agregarEtiqueta(tag2);
 
-        // Mostrar etiquetas
         System.out.println("\nEtiquetas:");
         for (Etiqueta e : nota.getEtiquetas()) {
             System.out.println("- " + e.getNombre());
         }
 
-        // Agregar archivo adjunto
         ArchivoAdjunto archivo = new ArchivoAdjunto("EjerciciosDerivadas.pdf", "PDF", "/docs/derivadas.pdf");
         nota.agregarArchivo(archivo);
 
-        // Mostrar nota completa
         System.out.println("\nResumen completo de la nota:\n" + nota);
 
-        // Cerrar sesión
+      
         usuario.cerrarSesion();
     }
 }
