@@ -32,4 +32,41 @@ public class Nota {
         archivos.add(archivo);
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public Date getFechaActualizacion() {
+        return fechaActualizacion;
+    }
+
+    public Materia getMateria() {
+        return materia;
+    }
+
+    public List<Etiqueta> getEtiquetas() {
+        return etiquetas;
+    }
+
+    public List<ArchivoAdjunto> getArchivos() {
+        return archivos;
+    }
+
+    @Override
+    public String toString() {
+        return "Nota: " + titulo + "\n" +
+               "Contenido: " + contenido + "\n" +
+               "Materia: " + materia + "\n" +
+               "Etiquetas: " + etiquetas + "\n" +
+               "Archivos: " + archivos + "\n" +
+               "Creada: " + fechaCreacion + " | Actualizada: " + fechaActualizacion;
+    }
 }
