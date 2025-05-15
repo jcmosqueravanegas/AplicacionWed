@@ -1,21 +1,22 @@
 import java.util.*;
-
 public class Nota {
     private String titulo;
     private String contenido;
     private Date fechaCreacion;
     private Date fechaActualizacion;
-    private Materia materia;
-    private List<Etiqueta> etiquetas;
-    private List<ArchivoAdjunto> archivos;
+    private Estudiante estudiante;
+    private Curso curso;
+    private List<Clasificacion> clasificaciones;
+    private List<Archivo> archivos;
 
-    public Nota(String titulo, String contenido, Materia materia) {
+    public Nota(String titulo, String contenido, Estudiante estudiante, Curso curso) {
         this.titulo = titulo;
         this.contenido = contenido;
+        this.estudiante = estudiante;
+        this.curso = curso;
         this.fechaCreacion = new Date();
         this.fechaActualizacion = new Date();
-        this.materia = materia;
-        this.etiquetas = new ArrayList<>();
+        this.clasificaciones = new ArrayList<>();
         this.archivos = new ArrayList<>();
     }
 
@@ -24,49 +25,19 @@ public class Nota {
         this.fechaActualizacion = new Date();
     }
 
-    public void agregarEtiqueta(Etiqueta etiqueta) {
-        etiquetas.add(etiqueta);
+    public void agregarClasificacion(Clasificacion clasificacion) {
+        clasificaciones.add(clasificacion);
     }
 
-    public void agregarArchivo(ArchivoAdjunto archivo) {
+    public void agregarArchivo(Archivo archivo) {
         archivos.add(archivo);
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getContenido() {
-        return contenido;
-    }
-
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    public Date getFechaActualizacion() {
-        return fechaActualizacion;
-    }
-
-    public Materia getMateria() {
-        return materia;
-    }
-
-    public List<Etiqueta> getEtiquetas() {
-        return etiquetas;
-    }
-
-    public List<ArchivoAdjunto> getArchivos() {
-        return archivos;
-    }
-
-    @Override
-    public String toString() {
-        return "Nota: " + titulo + "\n" +
-               "Contenido: " + contenido + "\n" +
-               "Materia: " + materia + "\n" +
-               "Etiquetas: " + etiquetas + "\n" +
-               "Archivos: " + archivos + "\n" +
-               "Creada: " + fechaCreacion + " | Actualizada: " + fechaActualizacion;
-    }
+    // Getters
+    public String getTitulo() { return titulo; }
+    public String getContenido() { return contenido; }
+    public Estudiante getEstudiante() { return estudiante; }
+    public Curso getCurso() { return curso; }
+    public List<Clasificacion> getClasificaciones() { return clasificaciones; }
+    public List<Archivo> getArchivos() { return archivos; }
 }

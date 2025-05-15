@@ -1,7 +1,7 @@
-public class Etiqueta {
+public class Curso {
     private String nombre;
 
-    public Etiqueta(String nombre) {
+    public Curso(String nombre) {
         this.nombre = nombre;
     }
 
@@ -11,10 +11,5 @@ public class Etiqueta {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    @Override
-    public String toString() {
-        return nombre;
     }
 }
